@@ -1,0 +1,27 @@
+<head>
+  <title>template-override</title>
+</head>
+
+<body>
+  {{> theTime}}
+</body>
+
+<template name="theTime">
+  <h1>The Time</h1>
+  <p>
+    <em>{{#if weLiveInTheFuture}}<strong>We live in the future</strong> {{/if}}{{timeOfDay}}</em>
+  </p>
+  {{#unless weLiveInTheFuture}}
+    <input type="button" class="btn" value="To The Future" />
+  {{/unless}}
+</template>
+
+<template name="theTime">
+  <h1>The Fucking Time</h1>
+  <p>
+    <em>{{#if weLiveInTheFuture}}<strong>We live in the fucking future</strong> {{/if}}{{timeOfDay}}</em>
+  </p>
+  {{#unless weLiveInTheFuture}}
+    <input type="button" class="btn" value="To The Fucking Future" />
+  {{/unless}}
+</template>
